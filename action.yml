@@ -11,7 +11,7 @@ runs:
   steps:
     - id: setup-python
       name: Setup Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version:  ${{ inputs.python-version }}
 
@@ -24,7 +24,7 @@ runs:
 
     - id: cache-pipfile
       name: Cache Pipfile
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: ~/.local/share/virtualenvs
         key: ${{ runner.os }}-python-${{ steps.setup-python.outputs.python-version }}-pipenv-${{ hashFiles('Pipfile.lock') }}
