@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Install Python, pipenv and Pipfile packages
-        uses: palewire/install-python-pipenv-pipfile@v4
+        uses: palewire/install-python-pipenv-pipfile
         with:
           python-version: 3.14
 
