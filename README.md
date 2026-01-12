@@ -21,12 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Install Python, pipenv and Pipfile packages
-        uses: palewire/install-python-pipenv-pipfile@v3
+        uses: palewire/install-python-pipenv-pipfile@v4
         with:
-          python-version: 3.9
+          python-version: 3.14
 
       - name: Do my thing
         run: make
